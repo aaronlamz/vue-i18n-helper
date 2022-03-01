@@ -1,0 +1,7 @@
+# Ignore artifacts:
+dist
+types
+docs
+coverage
+tsconfig.json
+README.md
