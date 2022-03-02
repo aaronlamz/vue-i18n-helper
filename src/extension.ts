@@ -37,8 +37,12 @@ export function activate(context: vscode.ExtensionContext) {
 
   const modules = Object.values({ ...commandModules })
   modules.forEach((module: ModuleType) => {
-    const disposable = module(context)
-    context.subscriptions.push(disposable)
+    const disposables = module(context)
+    if (Array.isArray(disposables)) {
+      context.subscriptions.push(...disposables)
+    } else {
+      context.subscriptions.push(disposables)
+    }
   })
 }
 
