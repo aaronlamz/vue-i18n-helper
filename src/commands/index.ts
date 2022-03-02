@@ -1,1 +1,1 @@
-export * from '@/commands/extract'
+export * from './extract'

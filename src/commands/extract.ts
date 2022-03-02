@@ -1,10 +1,10 @@
 import * as vscode from 'vscode'
-import COMMANDS from '@/COMMANDS'
+import meta from '../meta'
 
 const commandExtarct = () => {
-  console.log('excute extract commmand')
+  vscode.window.showInformationMessage('excute extract commmand')
 }
 
 export const extract = () => {
-  return vscode.commands.registerCommand(COMMANDS.extract, commandExtarct)
+  return vscode.commands.registerCommand(meta.COMMANDS.extract, commandExtarct)
 }
