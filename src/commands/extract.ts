@@ -9,7 +9,7 @@ const commandExtarct = () => {
   // The currently active editor or undefined
   if (vscode.window.activeTextEditor) {
     vscode.window.activeTextEditor.edit(editBuilder => {
-      const { start, end } = vscode.window.activeTextEditor?.selection
+      const { start, end } = (vscode.window.activeTextEditor as any).selection
       editBuilder.replace(new vscode.Range(start, end), key)
     })
   }
