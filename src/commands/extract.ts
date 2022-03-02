@@ -2,7 +2,7 @@ import * as vscode from 'vscode'
 import COMMANDS from '@/COMMANDS'
 
 const commandExtarct = () => {
-  console.log('excute commmand')
+  console.log('excute extract commmand')
 }
 
 export const extract = () => {
