@@ -6,6 +6,12 @@
 		"lib": [
 			"ES2020"
 		],
+    "baseUrl":"./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
 		"sourceMap": true,
 		"rootDir": "src",
 		"strict": true   /* enable all strict type-checking options */
