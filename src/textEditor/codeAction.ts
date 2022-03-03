@@ -10,12 +10,17 @@ export const codeActionsProvider = () => {
       context: vscode.CodeActionContext,
       token: vscode.CancellationToken
     ) => {
-      console.log(document, range, context, token)
+      console.log('provideCodeActions', document, range, context, token)
+      console.log('selectionText', document.getText(range))
       const commandActions = [
         {
-          title: '替换为$t("key")模式',
+          title: 'replace with {{$t("key")}}',
           command: meta.COMMANDS.extract,
-          arguments: []
+          arguments: [
+            {
+              selectionText: document.getText(range)
+            }
+          ]
         }
       ]
       return commandActions

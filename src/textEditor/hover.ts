@@ -9,6 +9,7 @@ export const hoverProvider = () => {
       token: vscode.CancellationToken
     ) => {
       console.log(document, position, token)
+      // console.log('xx', vscode.window.activeTextEditor?.document.getText())
       return new vscode.Hover('test hover')
     }
   })
