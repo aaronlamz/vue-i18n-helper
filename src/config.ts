@@ -9,4 +9,13 @@ export default class Config {
   static get extensionName() {
     return extensionName
   }
+
+  static get languageFeatures() {
+    return [
+      { scheme: 'file', language: 'html' },
+      { scheme: 'file', language: 'typescript' },
+      { scheme: 'file', language: 'javascript' },
+      { scheme: '*', language: 'vue' }
+    ]
+  }
 }
