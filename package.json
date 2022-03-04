@@ -17,7 +17,9 @@
     "onLanguage:javascript",
     "onLanguage:html",
     "onLanguage:vue",
-		"onCommand:vscode-i18n-helper.helloWorld"
+		"onCommand:vscode-i18n-helper.helloWorld",
+		"onCommand:vscode-i18n-helper.initPath",
+		"onCommand:vscode-i18n-helper.customizePath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -25,6 +27,14 @@
 			{
 				"command": "vscode-i18n-helper.helloWorld",
 				"title": "Hello World"
+			},
+			{
+				"command": "vscode-i18n-helper.initPath",
+				"title": "initPath"
+			},
+			{
+				"command": "vscode-i18n-helper.customizePath",
+				"title": "customizePath"
 			}
 		]
 	},
