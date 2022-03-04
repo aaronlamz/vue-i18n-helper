@@ -1,4 +1,5 @@
 # vscode-i18n-helper README
+// Coming soon...
 
 This is the README for your extension "vscode-i18n-helper". After writing up a brief description, we recommend including the following sections.
 
