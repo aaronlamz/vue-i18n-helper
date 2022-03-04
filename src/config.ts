@@ -1,13 +1,9 @@
-export const extensionName = 'vscode-i18n-helper'
-export const author = 'AaronLam'
+import * as vscode from 'vscode'
 
+const extensionName = 'vscode-i18n-helper'
 const I18N_PATHS_KEY = 'i18nPaths'
 
 export default class Config {
-  static get extensionId() {
-    return `${author}.${extensionName}`
-  }
-
   static get extensionName() {
     return extensionName
   }
@@ -26,11 +22,11 @@ export default class Config {
     return paths ? paths.split(',') : []
   }
 
-  static getConfig(key): any {
+  static getConfig(key: string): any {
     return vscode.workspace.getConfiguration(this.extensionName).get(key)
   }
 
-  static setConfig(key, value, isGlobal = false) {
+  static setConfig(key: string, value: any, isGlobal = false) {
     return vscode.workspace
       .getConfiguration(this.extensionName)
       .update(key, value, isGlobal)
