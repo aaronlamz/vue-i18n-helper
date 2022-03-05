@@ -1,10 +1,7 @@
-import * as vscode from 'vscode'
-
 class I18n {
-  getI18nKeyBySelection(selection: string, ...args: any) {
+  getI18nKeyBySelection(selection: string) {
     return (
-      this.getI18nKeyFromFile(selection, args) ||
-      this.getI18nKeyFromPaths(selection)
+      this.getI18nKeyFromFile(selection) || this.getI18nKeyFromPaths(selection)
     )
   }
 
@@ -12,8 +9,7 @@ class I18n {
     return `getI18nKeyFromPaths:${selection}`
   }
 
-  getI18nKeyFromFile(selection: string, document: vscode.TextDocument) {
-    console.log('getI18nKeyFromFile document', document)
+  getI18nKeyFromFile(selection: string) {
     return `getI18nKeyFromFile:${selection}`
   }
 }
