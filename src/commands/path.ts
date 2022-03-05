@@ -12,11 +12,15 @@ const initPath = async () => {
     ignore: ['**/node_modules'],
     onlyDirectories: true
   })
-  Config.updateI18nPaths(result)
-  const info = `${
-    Config.extensionName
-  }:已配置以下语言包目录文件\n ${result.join('\n')}`
-  vscode.window.showInformationMessage(info)
+  if (result.length) {
+    Config.updateI18nPaths(result)
+    const info = `${
+      Config.extensionName
+    }:已配置以下语言包目录文件\n ${result.join('\n')}`
+    vscode.window.showInformationMessage(info)
+  } else {
+    vscode.window.showInformationMessage('初始化语言包目录失败')
+  }
 }
 
 // execute default initPath
