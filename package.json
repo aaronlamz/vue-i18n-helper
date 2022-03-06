@@ -36,7 +36,18 @@
 				"command": "i18n-helper.customizePath",
 				"title": "自定义文件目录配置"
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "i18n-helper",
+			"properties": {
+			  "i18n-helper.i18nPaths": {
+				"type": "string",
+				"default": "",
+				"description": "语言包文件的目录（相对于项目根目录）"
+			  }
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",

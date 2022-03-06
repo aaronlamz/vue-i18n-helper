@@ -22,6 +22,10 @@ export default class Config {
     return paths ? paths.split(',') : []
   }
 
+  static get hasI18nPaths() {
+    return !!this.i18nPaths.length
+  }
+
   static getConfig(key: string): any {
     return vscode.workspace.getConfiguration(this.extensionName).get(key)
   }
