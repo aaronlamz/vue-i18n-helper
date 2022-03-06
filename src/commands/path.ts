@@ -6,7 +6,7 @@ import Config from '../config'
 const initPath = async () => {
   const rootPath = vscode.workspace.rootPath
   const pattern = [
-    `${rootPath}/**/(locales|locale|i18n|lang|langs|i18n-messages)`
+    `${rootPath}/**/(locales|locale|lang|langs|i18n|i18n-messages)`
   ]
   const result: any[] = await fg(pattern, {
     ignore: ['**/node_modules'],
@@ -19,7 +19,9 @@ const initPath = async () => {
     }:已配置以下语言包目录文件\n ${result.join('\n')}`
     vscode.window.showInformationMessage(info)
   } else {
-    vscode.window.showInformationMessage('初始化语言包目录失败')
+    vscode.window.showInformationMessage(
+      '初始化语言包目录失败，请检查语言包目录是否正确？或者自定义配置语言目录。'
+    )
   }
 }
 

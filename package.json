@@ -1,7 +1,7 @@
 {
-	"name": "vscode-i18n-helper",
+	"name": "i18n-helper",
 	"publisher": "AaronLam",
-	"displayName": "vscode-i18n-helper",
+	"displayName": "i18n-helper",
 	"description": "One-click i18n extraction tool for VSCode plugin",
 	"version": "0.0.1",
 	"engines": {
@@ -17,23 +17,23 @@
 		"onLanguage:javascript",
 		"onLanguage:html",
 		"onLanguage:vue",
-		"onCommand:vscode-i18n-helper.helloWorld",
-		"onCommand:vscode-i18n-helper.initPath",
-		"onCommand:vscode-i18n-helper.customizePath"
+		"onCommand:i18n-helper.helloWorld",
+		"onCommand:i18n-helper.initPath",
+		"onCommand:i18n-helper.customizePath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vscode-i18n-helper.helloWorld",
+				"command": "i18n-helper.helloWorld",
 				"title": "Hello World"
 			},
 			{
-				"command": "vscode-i18n-helper.initPath",
+				"command": "i18n-helper.initPath",
 				"title": "初始化默认文件目录配置"
 			},
 			{
-				"command": "vscode-i18n-helper.customizePath",
+				"command": "i18n-helper.customizePath",
 				"title": "自定义文件目录配置"
 			}
 		]
