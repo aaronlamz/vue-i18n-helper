@@ -3,7 +3,7 @@ import meta from '../meta'
 import { i18n } from '../i18n'
 
 const commandExtarct = ({ selectionText }: { selectionText: string }) => {
-  const i18nKey = i18n.getI18nKeyBySelection(selectionText)
+  const i18nKey = i18n.getI18nKey(selectionText)
   const activeTextEditor = vscode.window.activeTextEditor
   if (activeTextEditor && i18nKey) {
     activeTextEditor.edit((editBuilder) => {

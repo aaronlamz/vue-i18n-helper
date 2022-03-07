@@ -1,5 +1,5 @@
 class I18n {
-  getI18nKeyBySelection(selection: string) {
+  getI18nKey(selection: string) {
     return (
       this.getI18nKeyFromFile(selection) || this.getI18nKeyFromPaths(selection)
     )
