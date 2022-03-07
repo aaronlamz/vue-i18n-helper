@@ -25,7 +25,7 @@ const initPath = async () => {
   }
 }
 
-// execute default initPath
+// execute initPath
 initPath()
 
 // initialize default i18n path
