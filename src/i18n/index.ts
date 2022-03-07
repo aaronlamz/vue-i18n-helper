@@ -1,10 +1,10 @@
 class I18n {
   static i18nCachedData = {}
   async getI18nKey(selectionText: string) {
-    const { default: defaultComponent } = await import(
+    const { default: i18nData } = await import(
       '/Users/linjiajun/code/transaction/src/pages/conversion-sg/stock-transfer/i18n'
     )
-    console.log(defaultComponent)
+    console.log(i18nData)
     return (
       this.getI18nKeyFromFile(selectionText) ||
       this.getI18nKeyFromPaths(selectionText)
