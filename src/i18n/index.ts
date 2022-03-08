@@ -1,17 +1,17 @@
+import Config from '../config'
 class I18n {
   static i18nCachedData = {}
   async getI18nKey(selectionText: string) {
-    const { default: i18nData } = await import(
-      '/Users/linjiajun/code/transaction/src/pages/conversion-sg/stock-transfer/i18n'
-    )
-    console.log(i18nData)
-    return (
-      this.getI18nKeyFromFile(selectionText) ||
-      this.getI18nKeyFromPaths(selectionText)
-    )
+    return this.getI18nKeyFromPaths(selectionText)
   }
 
   getI18nKeyFromPaths(selectionText: string) {
+    if (Config.hasI18nPaths) {
+      Config.i18nPaths.forEach(async (path) => {
+        const { default: i18nData } = await import(path)
+        console.log(path, i18nData)
+      })
+    }
     return `getI18nKeyFromPaths:${selectionText}`
   }
 
