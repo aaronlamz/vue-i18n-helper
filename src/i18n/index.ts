@@ -1,16 +1,17 @@
 import Config from '../config'
+import { createGraph, bundle } from './bundle'
 class I18n {
   static i18nCachedData = {}
-  async getI18nKey(selectionText: string) {
+  getI18nKey(selectionText: string) {
     return this.getI18nKeyFromPaths(selectionText)
   }
 
   getI18nKeyFromPaths(selectionText: string) {
     if (Config.hasI18nPaths) {
-      Config.i18nPaths.forEach(async (path) => {
-        const { default: i18nData } = await import(path)
-        console.log(path, i18nData)
-      })
+      const graph = createGraph(
+        '/Users/linjiajun/code/transaction/src/pages/public-business/risk-assessment/i18n/index.ts'
+      )
+      console.log(bundle(graph))
     }
     return `getI18nKeyFromPaths:${selectionText}`
   }

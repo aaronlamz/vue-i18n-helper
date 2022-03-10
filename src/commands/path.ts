@@ -25,10 +25,10 @@ const initPath = async () => {
   }
 }
 
-// execute initPath
+// initialize default i18n path
 initPath()
 
-// initialize default i18n path
+// default i18n path
 export const initPathCommand = () => {
   return vscode.commands.registerCommand(meta.COMMANDS.initPath, initPath)
 }

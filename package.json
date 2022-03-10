@@ -41,11 +41,11 @@
 			"type": "object",
 			"title": "i18n-helper",
 			"properties": {
-			  "i18n-helper.i18nPaths": {
-				"type": "string",
-				"default": "",
-				"description": "语言包文件的目录（相对于项目根目录）"
-			  }
+				"i18n-helper.i18nPaths": {
+					"type": "string",
+					"default": "",
+					"description": "语言包文件的目录（相对于项目根目录）"
+				}
 			}
 		}
 	},
@@ -73,5 +73,15 @@
 		"mocha": "^9.2.1",
 		"prettier": "^2.5.1",
 		"typescript": "^4.5.5"
+	},
+	"dependencies": {
+		"@babel/core": "^7.17.5",
+		"@babel/preset-env": "^7.16.11",
+		"@babel/preset-typescript": "^7.16.7",
+		"@babel/traverse": "^7.17.3",
+		"babel-core": "^6.26.3",
+		"babel-preset-env": "^1.7.0",
+		"babel-traverse": "^6.26.0",
+		"babylon": "^6.18.0"
 	}
 }
