@@ -1,5 +1,6 @@
 import Config from '../config'
 import { createGraph, bundle } from './parser'
+
 class I18n {
   static i18nCachedData = {}
   getI18nKey(selectionText: string) {
