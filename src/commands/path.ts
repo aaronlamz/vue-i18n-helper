@@ -16,7 +16,7 @@ const initPath = async () => {
     Config.updateI18nPaths(result)
     const info = `${
       Config.extensionName
-    }:已配置以下语言包目录文件\n ${result.join('\n')}`
+    }:已初始化以下语言包目录文件\n ${result.join('\n')}`
     vscode.window.showInformationMessage(info)
   } else {
     vscode.window.showInformationMessage(
