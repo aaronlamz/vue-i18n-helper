@@ -25,11 +25,11 @@
 		"commands": [
 			{
 				"command": "i18n-helper.initPath",
-				"title": "初始化默认文件目录配置"
+				"title": "i18n-helper:初始化默认文件目录配置"
 			},
 			{
 				"command": "i18n-helper.customizePath",
-				"title": "自定义文件目录配置"
+				"title": "i18n-helper:自定义文件目录配置"
 			}
 		],
 		"configuration": {
@@ -42,7 +42,16 @@
 					"description": "语言包文件的目录（相对于项目根目录）"
 				}
 			}
-		}
+		},
+    "menus": {
+      "editor/context": [
+        {
+          "command": "i18n-helper.initPath",
+          "when": "resourceLangId == vue",
+          "group": "navigation"
+        }
+      ]
+    }
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
