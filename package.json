@@ -17,17 +17,12 @@
 		"onLanguage:javascript",
 		"onLanguage:html",
 		"onLanguage:vue",
-		"onCommand:i18n-helper.helloWorld",
 		"onCommand:i18n-helper.initPath",
 		"onCommand:i18n-helper.customizePath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
-			{
-				"command": "i18n-helper.helloWorld",
-				"title": "Hello World"
-			},
 			{
 				"command": "i18n-helper.initPath",
 				"title": "初始化默认文件目录配置"
