@@ -2,8 +2,9 @@ import Config from './config'
 
 export default {
   COMMANDS: {
-    extract: `${Config.extensionName}.extract`,
     initPath: `${Config.extensionName}.initPath`,
-    customizePath: `${Config.extensionName}.customizePath`
+    customizePath: `${Config.extensionName}.customizePath`,
+    extract: `${Config.extensionName}.extract`,
+    editI18n: `${Config.extensionName}.editI18n`
   }
 }
