@@ -1,4 +1,4 @@
-# i18n-helper README
+# vscode-vue-i18n-helper
 // Coming soon...
 
 This is the README for your extension "i18n-helper". After writing up a brief description, we recommend including the following sections.
