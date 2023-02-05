@@ -16,10 +16,6 @@ class I18n {
     }
     return `getI18nKeyFromPaths:${selectionText}`
   }
-
-  getI18nKeyFromFile(selectionText: string) {
-    return `getI18nKeyFromFile:${selectionText}`
-  }
 }
 
 export const i18n = new I18n()
