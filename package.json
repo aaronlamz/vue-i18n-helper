@@ -1,7 +1,7 @@
 {
-	"name": "vscode-vue-i18n-helper",
+	"name": "vue-i18n-helper",
 	"publisher": "AaronLam",
-	"displayName": "vscode-vue-i18n-helper",
+	"displayName": "vue-i18n-helper",
 	"description": "One-click i18n extraction tool for VSCode plugin",
 	"version": "0.0.1",
 	"engines": {
@@ -17,26 +17,26 @@
 		"onLanguage:javascript",
 		"onLanguage:html",
 		"onLanguage:vue",
-		"onCommand:vscode-vue-i18n-helper.initPath",
-		"onCommand:vscode-vue-i18n-helper.customizePath"
+		"onCommand:vue-i18n-helper.initPath",
+		"onCommand:vue-i18n-helper.customizePath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vscode-vue-i18n-helper.initPath",
-				"title": "vscode-vue-i18n-helper:初始化默认文件目录配置"
+				"command": "vue-i18n-helper.initPath",
+				"title": "vue-i18n-helper:初始化默认文件目录配置"
 			},
 			{
-				"command": "vscode-vue-i18n-helper.customizePath",
-				"title": "vscode-vue-i18n-helper:自定义文件目录配置"
+				"command": "vue-i18n-helper.customizePath",
+				"title": "vue-i18n-helper:自定义文件目录配置"
 			}
 		],
 		"configuration": {
 			"type": "object",
-			"title": "vscode-vue-i18n-helper",
+			"title": "vue-i18n-helper",
 			"properties": {
-				"vscode-vue-i18n-helper.i18nPaths": {
+				"vue-i18n-helper.i18nPaths": {
 					"type": "string",
 					"default": "",
 					"description": "语言包文件的目录（相对于项目根目录）"
@@ -46,7 +46,7 @@
 		"menus": {
 			"editor/context": [
 				{
-					"command": "vscode-vue-i18n-helper.initPath",
+					"command": "vue-i18n-helper.initPath",
 					"when": "resourceLangId == vue",
 					"group": "navigation"
 				}

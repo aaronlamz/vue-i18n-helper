@@ -1,11 +1,18 @@
 import * as vscode from 'vscode'
 
-const extensionName = 'vscode-vue-i18n-helper'
 const I18N_PATHS_KEY = 'i18nPaths'
 
 export default class Config {
+  static get extension(): vscode.Extension<any> {
+    return vscode.extensions.getExtension(this.extensionId)
+  }
+
+  static get extensionId() {
+    return `${global.__EXT.author}.${global.__EXT.name}`
+  }
+
   static get extensionName() {
-    return extensionName
+    return global.__EXT.name
   }
 
   static get languageFeatures() {
@@ -24,6 +31,10 @@ export default class Config {
 
   static get hasI18nPaths() {
     return !!this.i18nPaths.length
+  }
+
+  static get version() {
+    return this.extension.packageJSON.version
   }
 
   static getConfig(key: string): any {

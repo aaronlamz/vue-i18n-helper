@@ -1,4 +1,4 @@
-# vscode-vue-i18n-helper
+# vue-i18n-helper
 一个帮助编写vue-i18n的vscode插件
 > Building a good extension can take a lot of time and effort.
 ## TODO
