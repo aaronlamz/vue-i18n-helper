@@ -1,6 +1,6 @@
 import * as vscode from 'vscode'
 
-const extensionName = 'i18n-helper'
+const extensionName = 'vscode-vue-i18n-helper'
 const I18N_PATHS_KEY = 'i18nPaths'
 
 export default class Config {
