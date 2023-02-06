@@ -1,6 +1,6 @@
 import * as vscode from 'vscode'
 import meta from '../meta'
-import { i18n } from '../i18n'
+import { i18n } from '../i18nFile'
 
 const commandExtarct = ({ selectionText }: { selectionText: string }) => {
   const i18nKey = i18n.getI18nKey(selectionText)
