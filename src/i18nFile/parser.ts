@@ -47,9 +47,9 @@ export function createGraph(entry) {
 }
 
 // package dependented files into sigle file
-export function bundle(graph) {
+export function bundle(graph: any) {
   let modules = ''
-  graph.forEach((mod) => {
+  graph.forEach((mod: any) => {
     modules += `${mod.id}:[
       function(require,module,exports){
         ${mod.code}
