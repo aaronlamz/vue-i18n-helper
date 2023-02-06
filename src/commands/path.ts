@@ -2,6 +2,7 @@ import * as vscode from 'vscode'
 import * as fg from 'fast-glob'
 import meta from '../meta'
 import Config from '../config'
+import Log from '../utils/log'
 
 class I18nPath {
   constructor() {
@@ -26,6 +27,7 @@ class I18nPath {
         Config.extensionName
       }:已初始化以下语言包目录文件\n ${result.join('\n')}`
       vscode.window.showInformationMessage(info)
+      Log.info(info)
     } else {
       vscode.window.showInformationMessage(
         '初始化语言包目录失败，请检查语言包目录是否正确？或者自定义配置语言目录。'
@@ -36,14 +38,12 @@ class I18nPath {
 
 const i18nPath = new I18nPath()
 
-// default i18n path
 export const autoInitPathCommand = () => {
   return vscode.commands.registerCommand(meta.COMMANDS.autoInitPath, () => {
     i18nPath.autoInitPath()
   })
 }
 
-// customize i18n path
 export const customizePathCommand = () => {
   return vscode.commands.registerCommand(meta.COMMANDS.customizePath, () => {
     console.log('')
