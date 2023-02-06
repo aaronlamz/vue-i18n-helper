@@ -18,7 +18,7 @@
 		"onLanguage:html",
 		"onLanguage:vue",
 		"onCommand:vue-i18n-helper.initPath",
-		"onCommand:vue-i18n-helper.customizePath"
+		"onCommand:vue-i18n-helper.manualInitPath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -28,7 +28,7 @@
 				"title": "vue-i18n-helper:初始化默认文件目录配置"
 			},
 			{
-				"command": "vue-i18n-helper.customizePath",
+				"command": "vue-i18n-helper.manualInitPath",
 				"title": "vue-i18n-helper:自定义文件目录配置"
 			}
 		],

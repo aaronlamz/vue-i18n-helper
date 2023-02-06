@@ -45,8 +45,8 @@ export const autoInitPathCommand = () => {
   })
 }
 
-export const customizePathCommand = () => {
-  return vscode.commands.registerCommand(meta.COMMANDS.customizePath, () => {
+export const manualInitPathCommand = () => {
+  return vscode.commands.registerCommand(meta.COMMANDS.manualInitPath, () => {
     console.log('')
   })
 }
