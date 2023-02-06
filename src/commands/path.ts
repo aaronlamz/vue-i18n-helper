@@ -6,9 +6,10 @@ import Log from '../utils/log'
 
 class I18nPath {
   constructor() {
-    if (Config.hasI18nPaths) {
-      return
-    }
+    console.log(Config)
+    // if (Config.hasI18nPaths) {
+    //   return
+    // }
     this.autoInitPath()
   }
 
