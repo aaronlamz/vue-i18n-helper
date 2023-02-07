@@ -35,6 +35,47 @@ class I18nPath {
       )
     }
   }
+
+  async manualInitPath() {
+    const okText = '立即配置'
+    const result = await vscode.window.showInformationMessage(
+      `${Config.extensionName}: 项目里的locales文件夹在哪？`,
+      okText
+    )
+
+    if (result !== okText) {
+      return
+    }
+
+    const dirs = await this.pickDir()
+    Config.updateI18nPaths(dirs)
+
+    this.success()
+  }
+
+  async pickDir(): Promise<string[]> {
+    const dirs = await vscode.window.showOpenDialog({
+      defaultUri: vscode.Uri.file(vscode.workspace.rootPath),
+      canSelectFolders: true
+    })
+
+    return dirs.map((dirItem) => dirItem.path)
+  }
+
+  async success() {
+    const okText = '继续配置'
+    const result = await vscode.window.showInformationMessage(
+      `${Config.extensionName}: 配置好了，还有其他目录吗？`,
+      okText,
+      '没有了'
+    )
+
+    if (result !== okText) {
+      return
+    }
+
+    this.manualInit()
+  }
 }
 
 const i18nPath = new I18nPath()
@@ -47,6 +88,6 @@ export const autoInitPathCommand = () => {
 
 export const manualInitPathCommand = () => {
   return vscode.commands.registerCommand(meta.COMMANDS.manualInitPath, () => {
-    console.log('')
+    i18nPath.manualInitPath()
   })
 }
