@@ -49,8 +49,7 @@ class I18nPath {
 
     const dirs = await this.pickDir()
     Config.updateI18nPaths(dirs)
-
-    this.success()
+    this.next()
   }
 
   async pickDir(): Promise<string[]> {
@@ -62,7 +61,7 @@ class I18nPath {
     return dirs.map((dirItem) => dirItem.path)
   }
 
-  async success() {
+  async next() {
     const okText = '继续配置'
     const result = await vscode.window.showInformationMessage(
       `${Config.extensionName}: 配置好了，还有其他目录吗？`,
@@ -73,8 +72,7 @@ class I18nPath {
     if (result !== okText) {
       return
     }
-
-    this.manualInit()
+    this.manualInitPath()
   }
 }
 
