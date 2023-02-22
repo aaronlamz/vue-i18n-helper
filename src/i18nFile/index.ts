@@ -1,5 +1,5 @@
 import Config from '../config'
-import { createGraph, bundle } from './parser'
+// import { createGraph, bundle } from './parser'
 
 class I18n {
   static i18nCachedData = {}
@@ -9,10 +9,10 @@ class I18n {
 
   getI18nKeyFromPaths(selectionText: string) {
     if (Config.hasI18nPaths) {
-      const graph = createGraph(
-        '/Users/linjiajun/code/transaction/src/pages/public-business/risk-assessment/i18n/index.ts'
-      )
-      console.log(bundle(graph))
+      // const graph = createGraph(
+      //   '/Users/linjiajun/code/transaction/src/pages/public-business/risk-assessment/i18n/index.ts'
+      // )
+      // console.log(bundle(graph))
     }
     return `getI18nKeyFromPaths:${selectionText}`
   }
