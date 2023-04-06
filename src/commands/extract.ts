@@ -1,5 +1,5 @@
 import * as vscode from 'vscode'
-import meta from '../meta'
+import globalEnum from '../globalEnum'
 import { i18n } from '../i18nFile'
 
 const commandExtarct = ({ selectionText }: { selectionText: string }) => {
@@ -15,5 +15,8 @@ const commandExtarct = ({ selectionText }: { selectionText: string }) => {
 }
 
 export const extract = () => {
-  return vscode.commands.registerCommand(meta.COMMANDS.extract, commandExtarct)
+  return vscode.commands.registerCommand(
+    globalEnum.COMMANDS.extract,
+    commandExtarct
+  )
 }

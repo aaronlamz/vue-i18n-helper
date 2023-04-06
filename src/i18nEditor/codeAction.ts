@@ -1,5 +1,5 @@
 import * as vscode from 'vscode'
-import meta from '../meta'
+import globalEnum from '../globalEnum'
 import Config from '../config'
 
 export const codeActionsProvider = () => {
@@ -13,7 +13,7 @@ export const codeActionsProvider = () => {
       const commandActions = [
         {
           title: 'replace with {{$t("key")}}',
-          command: meta.COMMANDS.extract,
+          command: globalEnum.COMMANDS.extract,
           arguments: [
             {
               selectionText: document.getText(range),

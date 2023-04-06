@@ -1,6 +1,6 @@
 import * as vscode from 'vscode'
 import * as fg from 'fast-glob'
-import meta from '../meta'
+import globalEnum from '../globalEnum'
 import Config from '../config'
 import Log from '../utils/log'
 
@@ -79,13 +79,19 @@ class I18nPath {
 const i18nPath = new I18nPath()
 
 export const autoInitPathCommand = () => {
-  return vscode.commands.registerCommand(meta.COMMANDS.autoInitPath, () => {
-    i18nPath.autoInitPath()
-  })
+  return vscode.commands.registerCommand(
+    globalEnum.COMMANDS.autoInitPath,
+    () => {
+      i18nPath.autoInitPath()
+    }
+  )
 }
 
 export const manualInitPathCommand = () => {
-  return vscode.commands.registerCommand(meta.COMMANDS.manualInitPath, () => {
-    i18nPath.manualInitPath()
-  })
+  return vscode.commands.registerCommand(
+    globalEnum.COMMANDS.manualInitPath,
+    () => {
+      i18nPath.manualInitPath()
+    }
+  )
 }
